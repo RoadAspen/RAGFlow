@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		// 基础配置
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"moduleResolution": "Bundler", // 现代 monorepo 必备
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+
+		// 关键：不输出编译文件（子包自己控制）
+		"noEmit": true,
+
+		// 路径别名（可选，统一好用）
+		"baseUrl": ".",
+		"paths": {
+			"@ragflow/shared": ["packages/shared/src/index.ts"]
+		}
+	},
+	// 排除 node_modules
+	"exclude": ["node_modules", "**/dist", "**/build"]
+}
