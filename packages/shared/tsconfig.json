@@ -1,11 +1,10 @@
 {
-	"extends": "../../tsconfig.json",
+	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		// 共享包可开启编译输出（可选）
-		"noEmit": false,
-		"outDir": "./dist",
-		"rootDir": "./src"
+		"rootDir": "src",
+		"moduleResolution": "bundler",
+		"declaration": true // 生成 .d.ts
 	},
-	"include": ["src/**/*"],
+	"include": ["src"],
 	"exclude": ["node_modules", "dist"]
 }

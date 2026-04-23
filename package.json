@@ -1,13 +1,21 @@
 {
-  "name": "RAGFlow",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0"
+	"name": "RAGFlow",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"dev:web": "pnpm -r --filter \"./packages/*\" run build && pnpm -r --filter \"web\" run start:dev",
+		"dev:server": "pnpm -r --filter \"./packages/*\" run build && pnpm --filter \"server\" run start:dev",
+		"dev:all": "pnpm -r --filter \"./packages/*\" run build && pnpm -r --parallel --if-present --filter \"./packages/*\" --filter \"./apps/*\" run start:dev",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.33.0",
+	"devDependencies": {}
 }

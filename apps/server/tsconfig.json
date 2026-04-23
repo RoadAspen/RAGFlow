@@ -8,19 +8,22 @@
     "isolatedModules": true,
     "declaration": true,
     "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true, // 必须开启，否则 @Controller, @Injectable 等报错
+    "emitDecoratorMetadata": true, // 必须开启，用于依赖注入反射
     "allowSyntheticDefaultImports": true,
     "target": "ES2023",
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "../../",
+    "rootDir": "./src",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
+    "types": ["node"], // 确保这里添加了 "node"
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "include": ["src/**/*"], // 👈 推荐加上
+  "exclude": ["node_modules", "dist"] // 👈 推荐加上
 }

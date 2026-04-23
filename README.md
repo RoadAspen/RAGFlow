@@ -25,3 +25,16 @@ ragflow/
 脚手架： vite
 前端JS库： React + Typescript + zustand + jotai
 前端UI： shaden/UI + tailwindcss
+
+## 命令
+
+### 启动所有
+
+同时启动apps下的前後端项目 package.json中 scripts 的 start:dev 命令
+
+```sh
+pnpm --filter ./apps/* run start:dev
+
+# 并发启动， 如果不加 --parallel，pnpm 会尝试按依赖顺序运行；加上它则会强制所有应用同时启动，这对本地开发非常有用，可以节省等待时间。
+pnpm --filter ./apps/* run start:dev --parallel
+```

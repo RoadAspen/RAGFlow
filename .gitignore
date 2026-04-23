@@ -1,7 +1,7 @@
 # Nestjs specific
-/dist
+/**/dist
 /**/node_modules
-/build
+/**/build
 /tmp
 
 # Logs
