@@ -2,11 +2,13 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class ExtractService {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async extract(_data: any) {
+  async extract() {
     return Promise.resolve({
-      name: '张三',
-      city: '北京',
+      code: 200,
+      data: {
+        name: '张三',
+        city: '北京',
+      },
     });
   }
 }

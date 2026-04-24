@@ -1,27 +1,18 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "bundler",
-    "types": ["node"], // 确保这里添加了 "node"
-    "resolvePackageJsonExports": true,
+    "module": "nodenext",
+    "target": "ES2021",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": false,
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "declaration": true,
-    "removeComments": true,
-    "experimentalDecorators": true, // 必须开启，否则 @Controller, @Injectable 等报错
-    "emitDecoratorMetadata": true, // 必须开启，用于依赖注入反射
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
-    "sourceMap": true,
-    "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["node"]
   },
-  "include": ["src/**/*"], // 👈 推荐加上
-  "exclude": ["node_modules", "dist"] // 👈 推荐加上
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

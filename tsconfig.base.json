@@ -1,10 +1,6 @@
 {
 	"compilerOptions": {
-		// 基础配置
-		"target": "ES2020",
-		"module": "ESNext",
 		"strict": true,
-		"moduleResolution": "bundler", // 现代 monorepo 必备
 		"esModuleInterop": true, // 兼容 import / require
 		"skipLibCheck": true, // 不检查 node_modules 类型
 		"resolveJsonModule": true,
