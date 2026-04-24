@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { ExtractRequestSchema } from '@ragflow/shared';
+import { useEffect, useState } from 'react';
 import './App.css';
 import heroImg from './assets/hero.png';
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
-
 function App() {
 	const [count, setCount] = useState(0);
-
+	useEffect(() => {
+		const data = ExtractRequestSchema.parse({});
+	}, []);
 	return (
 		<>
 			<section id="center">

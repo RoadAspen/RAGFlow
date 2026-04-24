@@ -1,27 +1,26 @@
 {
-  "name": "@ragflow/shared",
-  "version": "0.0.1",
-  "private": true,
-  "_type": "module代表本项目为ESM格式",
-  "type": "module",
-  "_main": "Node.js (默认), 老旧打包工具",
-  "main": "dist/index.js",
-  "_types": "VS Code, TypeScript 编译器 用到这个文件",
-  "types": "dist/index.d.ts",
-  "_module": "旧版打包工具用的（已过时，可用 exports 替代）",
-  "module": "./dist/index.mjs",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "scripts": {
-    "build": "tsc",
-    "start:dev": "tsc -w"
-  },
-  "dependencies": {
-    "zod": "^4.3.6"
-  }
+	"name": "@ragflow/shared",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.js",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"start:dev": "tsc -w"
+	},
+	"dependencies": {
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"typescript": "~6.0.2",
+		"typescript-eslint": "^8.58.2"
+	}
 }

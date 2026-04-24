@@ -1,13 +1,18 @@
 {
-  "compilerOptions": {
-    // 基础配置
-    "target": "ES2020",
-    "module": "ESNext",
-    "strict": true,
-    "moduleResolution": "Bundler", // 现代 monorepo 必备
-    "esModuleInterop": true, // 兼容 import / require
-    "skipLibCheck": true // 不检查 node_modules 类型
-  },
-  // 排除 node_modules
-  "exclude": ["node_modules", "**/dist", "**/build"]
+	"compilerOptions": {
+		// 基础配置
+		"target": "ES2020",
+		"module": "ESNext",
+		"strict": true,
+		"moduleResolution": "bundler", // 现代 monorepo 必备
+		"esModuleInterop": true, // 兼容 import / require
+		"skipLibCheck": true, // 不检查 node_modules 类型
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"paths": {
+			"@ragflow/shared": ["./packages/shared/src/index.ts"]
+		}
+	},
+	// 排除 node_modules
+	"exclude": ["node_modules", "**/dist", "**/build"]
 }

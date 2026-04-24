@@ -1,9 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "rootDir": "src",
-    "declaration": true // 生成 .d.ts
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"target": "ES2020",
+		"skipLibCheck": true,
+		"declaration": true // 必须开启（生成 .d.ts 类型文件）
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist"]
 }

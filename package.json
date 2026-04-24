@@ -8,9 +8,10 @@
 		"packages/*"
 	],
 	"scripts": {
-		"dev:web": "pnpm -r --filter \"./packages/*\" run build && pnpm -r --filter \"web\" run start:dev",
-		"dev:server": "pnpm -r --filter \"./packages/*\" run build && pnpm --filter \"server\" run start:dev",
-		"dev:all": "pnpm -r --filter \"./packages/*\" run build && pnpm -r --parallel --if-present --filter \"./packages/*\" --filter \"./apps/*\" run start:dev",
+		"dev:package": "pnpm -r --filter \"./packages/*\" run build",
+		"dev:web": "pnpm run dev:package && pnpm -r --filter \"web\" run start:dev",
+		"dev:server": "pnpm run dev:package && pnpm --filter \"server\" run start:dev",
+		"dev:all": "pnpm run dev:package && pnpm -r --parallel --if-present --filter \"./packages/*\" --filter \"./apps/*\" run start:dev",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],

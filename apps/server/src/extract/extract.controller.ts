@@ -8,7 +8,7 @@ export class ExtractController {
 
   @Post()
   extract(@Body() body: any) {
-    const data = ExtractRequestSchema.parse(body);
+    const data = ExtractRequestSchema.parse({ text: '123' });
     return this.extractService.extract(data);
   }
 }
